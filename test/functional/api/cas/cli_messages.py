@@ -1,5 +1,5 @@
 #
-# Copyright(c) 2019-2022 Intel Corporation
+# Copyright(c) 2019-2023 Intel Corporation
 # SPDX-License-Identifier: BSD-3-Clause
 #
 
@@ -7,6 +7,10 @@ import re
 
 from core.test_run import TestRun
 from test_utils.output import Output
+
+cache_already_detached = [
+    r"Cache device is already in standby detached state."
+]
 
 load_inactive_core_missing = [
     r"WARNING: Can not resolve path to core \d+ from cache \d+\. By-id path will be shown for that "
